@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    functions are used for optimum code and code reusability <br>
+    they wont work untill and unless they are called <br>   
+    function find(){ <br>
+        console.log("hello"); <br>
+    } <br>
+    find(); <br>
+
+    if the function dont have  any name then they are called  <br>anonymous function and can be stored <br>
+    let myfunc=function (){ <br>
+        console.log("hola"); <br>
+    } <br>
+    
+    myfunc();   can be called simply as usual functions <br>
+
+
+    PARAMETERIZED function    <br>
+    function find(a=10){    <br>
+        console.log("hello");    <br>
+        console.log(a);    <br>
+    }    <br>
+    find(20);      o/p will be 20    <br>
+
+    function find(name="iram"){    <br>
+        console.log(`name is ${name}`);    <br>
+        
+    }    <br>
+    find();    <br>
+
+        THERE can be a function call inside a function    <br>
+
+        function find(name="iram"){    <br>
+            console.log(myfunc());    <br>
+            
+        }    <br>
+        find();    <br>
+
+        DURING defining a parameter as array for a fuction define     <br>it with square brackets for the fcuntion to know that the     <br>parameter WILL be an array    <br>
+        function findarr(arr=[]){    <br>
+
+        }    <br>
+
+       # unlike let , var is accessesible even outside the block where it is defined     <br>
+</body>
+<script src="./functions.js"></script>
+</html>

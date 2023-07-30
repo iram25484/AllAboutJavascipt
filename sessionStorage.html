@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input"  placeholder="enter name">
+    <button id="btn" >click</button>
+    <button id="delete">delete</button>
+
+  <p> //SESSION STORAGE can store values like arrays , they actually store objects on form of array , js go to >> in right side of console ,then application then session storage under that the link of wherever ur sesion is but mind you that whenever you change your session the data will be lost
+
+   <br> sessionStorage.setItem("key1",input.value);
+    
+   <br> // now you can also access whatever the input is in the entire code  without clicking the input again js give the key to session storage type the following
+   <br> //sessionstorage.getItem("key1")
+    
+   <br> //session storage has scope of the session and tab where it is working , if new tab is opnend for the same website then data will be lost inside it
+    }
+    
+ <br>   btn.addEventListener("click",btnclick);
+    
+ <br>   if(sessionStorage.getItem("key1")) // if and only if there is an input then give an alert
+  <br>  {alert(sessionStorage.getItem("key1"));}
+    
+  <br>  //when delete button is pressed we want to print length in the console of how many keys have been entered
+  <br>  delete1.addEventListener("click",()=>{
+   <br>     console.log(sessionStorage.length);
+   <br> })
+    <br>
+    // SESSION storage has several other functions too  </p> 
+
+</body>
+<script src="session.js"></script>
+</html>

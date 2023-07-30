@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="thisone">hi</div>
+    <div>how</div>
+    <div class="yes" id="hola">you</div>
+    <div class="yes">doin</div>
+    <input type="text" name="yourname">please enter name
+    <span>hi</span>
+    <span>nono</span>
+    <button id="three">click me</button>
+
+<button id="four">delete</button>
+
+
+<br>
+<br>
+
+<br> NOTES
+
+
+<br>  console.log(document.body)
+<br>  // by document you can access any part of html and manipulate it
+<br>  // eg document.head
+<br>  // through document.body u will get what so ever in present inside the body
+<br>  console.log(document.documentElement) 
+<br>  // above will give all tags of html
+<br>  console.log(document.firstChild)
+<br>  // will return text bcz it takes the blank space before div as first child
+<br>  
+<br>  // to access very first div of html use below
+<br>  console.log(document.body.firstElementChild);
+<br>  
+<br>  console.log(document.childNodes)// will return all the div scripts text and tags
+<br>  console.log(document.childre)// will return only the div and scripts
+<br>  
+<br>  // all the div and other tags might look  like array but they are not 
+<br>  // to convert them into array use ARRAY
+<br>  
+<br>  const arr=document.body.children;
+<br>  const newArr=Array.from(arr);
+<br>  
+<br>  // now you can iterate over the tags and use all functions of array   
+<br>  console.log(arr[0]);
+<br>  arr[0].innerHTML=`<span class="two">bojour</span>`;  // you can edit the html my literally writing it but take care of the backticks
+<br>  
+<br>  // you can also give it style
+<br>  arr[0].style.backgroundColor="yellow";
+<br>  
+<br>  
+<br>  //suppose u wanna style a button named with id = mybt
+<br>  //const btt=document.getElementById("mybtn");
+<br>  //btt.style.backgroundColor="red";
+<br>  //btt.style.padding="20px 40px";
+<br>  //btt.style.color="white";
+<br>  
+<br>  
+<br>  console.log(arr[0]);
+<br>  // instead of targetting the first div as child 
+<br>  // you can give it id and then access it as 
+<br>  //console.log(id);
+<br>  
+<br>  console.log(thisone);
+<br>  //OR
+<br>  console.log(document.getElementById("thisone"));
+<br>  
+<br>  // accessing by class 
+<br>  // remember it is getElementsByClassName bcz u can give class to mutiple elements unlike id
+<br>  console.log(document.getElementsByClassName("yes"))
+<br>  // but remember u will get a collection of elements
+<br>  // you can target the firt element as
+<br>  const x=document.getElementsByClassName("yes")
+<br>  console.log(x[0]);
+<br>  
+<br>  //accessing through name 
+<br>  // you can access by name of the input
+<br>  console.log(document.getElementsByName("yourname"));
+<br>  
+<br>  // by tag
+<br>  console.log(document.getElementsByTagName("span")) // here definitely you will get collection of span which you can again target by putting in a variable then eg. x[0]
+<br>  
+<br>  // by queryselector
+<br>  console.log(document.querySelector(".yes")); // class by . and id by #
+<br>  
+<br>  // to know the id or class
+<br>  const y=document.getElementById("hola");
+<br>  console.log(y.getAttribute("id"));
+<br>  
+<br>  //Event onclick
+<br>  
+<br>  const z=document.getElementById("three");
+<br>  
+<br>  z.onclick=bring; //  remember dont call it here js give the name
+<br>  
+<br>  function bring()
+<br>  {
+<br>      console.log("on click done");
+<br>  const h2=document.createElement("h2"); // creating element by dom
+<br>  h2.innerText="heading added";
+<br>  document.body.append(h2);    
+<br>  
+<br>  }
+<br>  
+<br>  const r=document.getElementById("four");
+<br>  
+<br>  r.onclick=deletee;
+<br>  
+<br>  function deletee(){
+<br>      console.log("heading deleted")
+<br>      const h2=document.querySelector("h2")
+<br>      h2.remove(); // simply removing the element we created using dom
+<br>  }
+<br>  
+<br>
+
+</body>
+<script src="dom.js"></script>
+</html>

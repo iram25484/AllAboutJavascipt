@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn{
+        background-color: blue;
+    }
+
+    .myclass{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 10px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <h1 id="heading" style="color: brown;" style="font-family: Georgia, 'Times New Roman', Times, serif;" >welcome</h1>
+<div id="box1">box1</div>
+
+<p> WE CAN BRING CHANGES USING ON CICK BY CALLING A FUNCTION INSIDE BUTTON , BUT WHEN WE WANT TO DO DIFFERENT OTHER JOBS WHICH CAN BE MADE SIMPLER RATHER THAN CREATING FUNCTIONS SEPARATELY WE USE EVENT LISTNERS  
+SYNTAX- EXTRACT THE ELEMENT BY DOCUMENT  AND THEN EG btn.addEventListener("") <br> if you write without any element eg.  addEventListener() then this will apply the changes in the complete dom or window </p>
+<button id="btn">click me</button>
+<p>sometimes the style changes can be large and we would want them to use again and again then we can directly GIVE CLASS as button id="btn2" class="myclass">/button OR  BY EVENTLISTNERS USING CLASSLIST AS:
+    <br> btn2.classList.add("myclass");  but dot forget to getelement btn2</p>
+
+<button id="btn2">click me</button>
+
+<br>
+<br>
+<p>you can also access whatever is entered in input using event lositners 
+    SYNTAX- 
+    input.addEventListener("change",(e)=>{
+        console.log(e.target.value);
+    })
+</p>
+<input type="text" id="input" placeholder="enter any text">
+
+</body>
+<script src="event.js"></script>
+</html>
