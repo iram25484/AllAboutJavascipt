@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // syntax for PRIVATE variables 
+class myclass{
+    #a=20;
+    #b=10;
+
+    constructor(value1,value2){
+        this.#a=value1;
+        this.#b=value2;
+    }
+    print(){
+        console.log("im am printing");
+    }
+}
+
+//a and b cant be accessed from outside , only it can be in my class
+const obj=new myclass(); 
+console.log(obj);
+
+
+// in the same class above if we want to get data we can create a fucntion of getdata and call it as getdata();
+// but there are inbuilt fucntions set , get(returns) which dont need to be called as functions
+
+class myclass1{
+    #a1=20;
+    #b1=10;
+
+    constructor(value1,value2){
+        this.#a1=value1;
+        this.#b1=value2;
+    }
+    get getdata(){
+        return this.#a1;
+    }
+    set setA(z){
+        this.#a1=z;
+    }
+    set setB(y){
+        this.#b1=y;
+    }
+    print(){
+        console.log("im am printing");
+    }
+}
+
+//a and b cant be accessed from outside , only it can be in my class
+const obj1=new myclass1(); 
+console.log(obj1);
+
+obj1.setA=23;
+obj1.setB=43;
+console.log(obj1.getdata);
+
+    
+</body>
+<script src="class.js"></script>
+</html>

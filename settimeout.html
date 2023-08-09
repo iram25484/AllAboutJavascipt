@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <br> print=(name,income,gender)=>{
+  <br>     console.log(`welcome ${name},your income is ${income} and you are ${gender}`);
+  <br> }
+  <br> 
+  <br> // syntax , time is in milisecond
+  <br> setTimeout(print("iram"),5000);
+  <br> 
+  <br> 
+  <br> // this wont work : setTimeout(print("iram",200000,"female"),5000) ;
+  <br> 
+  <br> //FOR GIVING MULTIPLE PARAMETERS;
+  <br> setTimeout(print,5000,"iram",2000,"female");
+  <br> 
+  <br> //short form
+  <br> 
+  <br> // setTimeout((name,income,gender) => {
+  <br> //     console.log(`welcome ${name},your income is ${income} and you are ${gender}`);
+  <br> // }, timeout);
+  <br> 
+  <br> // you can PREVENT THE SETTIMEOUT BY clearTimeout js pass the id eg 
+  <br> 
+  <br> // btn.addEventListener("click",()=>{
+  <br> //     clearTimeout(give the id) // you can store the function inside a const variable and then pass that variable as the id eg const x= print=()=>{...}  thne cleartimeout(x); will prevent the function to work
+  <br> // })
+  <br> 
+   //queryselector in the addevent selects via the tag name
+    
+</body>
+<script src="settimeout.js"></script>
+</html>

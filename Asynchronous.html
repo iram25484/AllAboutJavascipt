@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<br>       <h1></h1>
+<br>       how to make js asynchronous , 3 methods are there :
+<br>       callback eg settimeout , ie. it will let the rest of the code execute if it has time to wait
+<br>       promise
+<br>       async await
+<br>       //CALLBACK 
+<br>   // happens when we pass a function as a paramter 
+<br>   
+<br>   function sum(a,b,func1){  // we pass the function as reference
+<br>       const result=a+b;
+<br>   func1(result);
+<br>   }
+<br>   
+<br>   function display(result){
+<br>       const h1=document.querySelector("h1");
+<br>       h1.innerText=result;
+<br>   }
+<br>   
+<br>   // now whenever we want to call both sum and display we can js call sum and pass display as a parameter and call it inside the HIGH ORDER FUNCTION which is sum here (high order function - jiske andr function as a paramter pass krey ho) and the function that is sent as paramter is called call back function kyuki woh baad me call hotey hai
+<br>   // another example of call back function 
+<br>   // const arr=[1,2,3,4];
+<br>   // arr.forEach(()=>{         HERE FOREACH IS HIGH ORDER BCZ IT WILL TAKE A FUNCTION AS PARAMETER WHICH WILL BE CALLED AFTER FOREACH IS ACCESSED
+<br>   
+<br>   //       })
+<br>   sum(20,35,display);
+<br>   
+<br>   // we can call it multiple times too . 
+<br>   sum(20,35,alert);
+<br>   
+<br>   
+<br>   // suppose we want to use 2 functions which are nearly equal eg. multiply and divide then we can use callback 
+<br>   
+<br>   const arr1=[10,20,30];
+<br>   
+<br>   function multiplyORdivide (array=[],func2)
+<br>   {
+<br>       const ans=[];
+<br>       for(let i=0;i<2;i++)
+<br>       {    ans.push(func2(arr1[i])); // we are callinf the function , it will return a number which will be pushed inside ans
+<br>   }
+<br>   console.log(ans);
+<br>   }
+<br>   
+<br>   // either v can do this
+<br>   
+<br>   // function multiply(a)
+<br>   // {
+<br>   //     return a*10;
+<br>   // }
+<br>   // function divide(a)
+<br>   // {
+<br>   //     return a/10;
+<br>   // }
+<br>   // multiplyORdivide(arr1,multiply);
+<br>   // multiplyORdivide(arr1,divide);
+<br>   
+<br>   // OR instead of making separate fucntion as multiply and diivde diirectly pass arrow fucntion like:
+<br>   
+<br>   // multiplyORdivide(arr1,(a)=>(){
+<br>   //     return a*10;
+<br>   // });
+<br>   
+<br>   // multiplyORdivide(arr1,(a)=>(){
+<br>   //     return a/10;
+<br>   // });
+<br>   
+<br>   // OR u could even return js as :
+<br>   
+<br>   multiplyORdivide(arr1,(a)=>a*10);  //shorcut of arrow function to return anything
+<br>   multiplyORdivide(arr1,(a)=>a/10);
+<br>   
+<br>   //often there occurs callback hell , see callback can help the code to be asynchronous but when we put many callbacks one inside another ,eg settimeout inside another settimeout which becms dependent on each other and waits for anpther to finish and if there are any glitch in between then the code bczm wrong , effects readability and maintainace
+<br>   // to help this out we have promises
+<br>   
+</body>
+<script src="async.js"></script>
+</html>
